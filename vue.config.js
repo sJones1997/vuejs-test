@@ -4,10 +4,9 @@ module.exports = defineConfig({
   css: {
     extract: false
   }, 
-  configureWebpack: {
-    optimization: {
-      splitChunks: false
-    }
+  configureWebpack: config => {
+    config.output.filename("form-build.js")
+    config.splitChunks = false;
   }
 
 })

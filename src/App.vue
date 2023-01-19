@@ -1,12 +1,12 @@
 <template>
-  <SignupForm/>
+  <div id="app-wrapper">
+    <SignupForm/>
+  </div>
 </template>
 
 <script>
 import SignupForm from './components/SignupForm.vue'
 export default {
-
-
   name: 'App',
   components: {
     SignupForm
@@ -21,11 +21,16 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+    background: #eee;
 }
 
-body {
+#app-wrapper {
+  height: 100vh;
+  padding: 30px;
+}
+
+* {
   margin: 0;
-  background: #eee;
+  padding: 0
 }
 </style>
